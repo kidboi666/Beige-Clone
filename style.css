@@ -1,0 +1,106 @@
+body {
+  font-family: "Lars", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+header {
+  width: 100%; 
+  height: 38px;
+  background: #f1f1f1;
+  font-size: 18px;
+  position: fixed;
+  z-index: 100;
+}
+header .wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+header .logo {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+header .nav {
+  height: 38px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .nav ul {
+  display: flex;
+  text-transform: uppercase;
+}
+header .nav ul li {
+  margin-right: 35px;
+  position: relative;
+}
+header .nav ul li:before {
+  content:"";
+  position: absolute;
+  left: -18px;
+  width: 13px;
+  height: 13px;
+  border: 1px solid chocolate;
+  background: chocolate;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+main .wrapper {
+  padding-top: 38px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+main .gallery__section {
+  position: relative;
+  padding: 20px;
+  height: 570px;
+}
+main .text__box {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-between;
+  align-content: space-between;
+}
+main .text__box h3:nth-child(even) {
+  text-align: right;
+}
+main .img__box {
+  width: 70%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+}
+main .img__box img {
+ width: 100%;
+}
+main .text__img {
+  text-align: center;
+}
+main .hover__box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+  text-transform: uppercase;
+  display: none;
+}
+main .gallery__section:hover .img__box {
+  display: none;
+}
+main .gallery__section:hover .hover__box {
+  display: block;
+}
+main .gallery__section:nth-child(7n+1) { background: #CFBBAE; }
+main .gallery__section:nth-child(7n+2) { background: #C9A997; }
+main .gallery__section:nth-child(7n+3) { background: #EBA170; }
+main .gallery__section:nth-child(7n+4) { background: #DD443D; }
+main .gallery__section:nth-child(7n+5) { background: #148296; }
+main .gallery__section:nth-child(7n+6) { background: #4E7E42; }
+main .gallery__section:nth-child(7n+7) { background: #605746; }
